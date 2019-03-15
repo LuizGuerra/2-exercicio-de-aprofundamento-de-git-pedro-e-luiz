@@ -1,0 +1,34 @@
+1 - Pergunta: qual a diferença entre sistemas de controle de versão centralizados e sistemas de controle de versão distribuídos?
+
+O controle de versão centralizado segue a topologia em estrela, havendo apenas um único repositório central mas várias cópias de trabalho, uma para cada desenvolvedor.
+
+Controle de Versão Distribuído são vários repositórios autônomos e independentes, um para cada desenvolvedor. Cada repositório possui uma área de trabalho acoplada e as operações commit e update acontecem localmente entre os dois.
+
+2 - Pergunta: explique claramente o que são as três áreas do repositório local do git.
+
+O diretório do Git é o local onde o Git armazena os metadados e o banco de objetos de seu projeto. Esta é a parte mais importante do Git, e é a parte copiada quando você clona um repositório de outro computador.
+
+O diretório de trabalho é um único checkout de uma versão do projeto. Estes arquivos são obtidos a partir da base de dados comprimida no diretório do Git e colocados em disco para que você possa utilizar ou modificar.
+
+A área de preparação é um simples arquivo, geralmente contido no seu diretório Git, que armazena informações sobre o que irá em seu próximo commit. É bastante conhecido como índice (index), mas está se tornando padrão chamá-lo de área de preparação.
+
+3 - Como o git identifica cada commit, uma vez que os repositórios são distribuídos?
+
+O mecanismo que o Git usa para fazer o checksum é chamado de hash SHA-1, uma string de 40 caracteres composta de caracteres hexadecimais (0-9 e a-f) que é calculado a partir do conteúdo de um arquivo ou estrutura de um diretório no Git. Um hash SHA-1 parece com algo mais ou menos assim:
+
+9 - Descreva o que fazem os comandos git reset HEAD --filename e git checkout --filename
+
+git reset HEAD --filename: Tira um arquivo da área de seleção
+git checkout --filename: Descarta as alterações no diretório de trabalho
+
+10 - Execute os comandos git status e git status -s, e explique (no arquivo de respostas) a saída exibida
+
+git status: Devolve a diferença entre o status da pasta no computador e no git
+git status -s: Destaca os caracteres que fornecem informações sobre o status de um determinado arquivo para facilitar a leitura. Isso está faltando ao usar --porcelain. --porcelain é usado para obter uma saída facilmente passível de ser analisada por um script.
+
+11 - Execute o comando git log e explique (no arquivo de respostas) a saída exibida
+
+Histórico de Commits
+
+12 - 
+
